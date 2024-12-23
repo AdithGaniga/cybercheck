@@ -1,0 +1,38 @@
+<resources>
+    <string name="help_off_time">
+        <![CDATA[
+        Wenn aktiviert, werden alle Anrufe (Nachrichten) während dieses Zeitraums zugelassen. Normalerweise gibt es nachts keine Spam-Anrufe. <br>
+        <br>
+        Wenn die Startzeit größer ist als die Endzeit, z. B. 20:00 -> 07:00, bedeutet dies den Zeitraum von 20:00 Uhr abends bis 07:00 Uhr am nächsten Morgen. <br>
+        <br>
+        <font color="#ea86ff"><b>Priorität: 10</b></font>
+        ]]>
+    </string>
+
+    <string name="help_regex_flags">
+        <![CDATA[
+            Diese Flags ändern das Übereinstimmungsverhalten des Regex, sie werden standardmäßig für neue Regeln festgelegt. <br>
+            <br>
+
+            <font color="#00BFFF"><b>Groß-/Kleinschreibung ignorieren</b></font>:<br>
+            &ensp; Dies macht die Musterübereinstimmung unabhängig von der Groß-/Kleinschreibung, <font color="#03DAC5"><b>a</b></font>
+              würde sowohl <font color="#03DAC5"><b>a</b></font> als auch <font color="#03DAC5"><b>A</b></font> entsprechen. <br>
+            <br>
+
+            <font color="#00BFFF"><b>Punkt stimmt alles überein</b></font>: <br>
+            &ensp; Wenn aktiviert, wird <font color="#03DAC5"><b>.</b></font> auch Zeilenumbruchzeichen (<font color="#03DAC5"><b>\\n</b></font>) übereinstimmen,
+              dadurch kann der Punkt über mehrere Zeilen hinweg übereinstimmen. <br>
+            &ensp; Anwendungsfall: <br>
+            &emsp;   Mehrzeilige SMS-Nachricht abgleichen: <br>
+            &emsp;   <font color="#fa7f71">fordern Sie Ihren Preis an: http://<br>
+            &emsp;   abc.com </font><br>
+            &emsp;   mit Regel: <br>
+            &emsp;   <font color="#fa7f71"><b>*http.*com.*</b></font> <br>
+
+            <br>
+            <font color="#00BFFF"><b>Rohe Nummer</b></font>: <br>
+            &ensp; Wenn aktiviert, wird die Nummer nicht optimiert, <font color="#03DAC5"><b>+</b></font> und <font color="#03DAC5"><b>führende 0en</b></font> bleiben erhalten, nützlich, um inländische Nummern zu unterscheiden.
+        ]]>
+    </string>
+
+</resources>

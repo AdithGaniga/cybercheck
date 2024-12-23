@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report an issue
+labels: [bug]
+body:
+
+  - type: input
+    id: SpamBlocker-version
+    attributes:
+      label: SpamBlocker version
+      description: |
+        You can find the version in **About** section.
+      placeholder: |
+        Example: 3.2
+    validations:
+      required: false
+
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version
+      placeholder: |
+        Example: 15
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: The issue
+    validations:
+      required: true
+

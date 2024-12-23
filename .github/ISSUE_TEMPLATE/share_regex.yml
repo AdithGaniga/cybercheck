@@ -1,0 +1,18 @@
+name: Share Regex
+description: Share your regex rules
+title: "[Country] Description"
+labels: [share regex]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing, the content will be synchronized to the wiki page within a minute.
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: "The regex"
+    validations:
+      required: true
+
+

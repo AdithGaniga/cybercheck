@@ -1,0 +1,145 @@
+<resources>
+    <string name="database">Database</string>
+    <string name="total">Total</string>
+    <string name="replace_from">From</string>
+    <string name="replace_to">To</string>
+    <string name="regex_pattern">RegEx</string>
+
+    <string name="help_spam_db">
+        <![CDATA[
+        Numbers in this database will be blocked.<br>
+        <br>
+        You can integrate any public database, or even multiple databases, you can also import numbers from local files.<br>
+        <br>
+        Check the "Automation" section below for how to schedule an auto-import task.<br>
+        <br>
+        It applies to both calls and SMS messages.<br>
+        <br>
+        <font color="#ea86ff"><b>Priority: 0</b></font>
+        ]]>
+    </string>
+    <string name="help_spam_db_ttl">
+        <![CDATA[
+        Spam numbers in the database will expire after N days, expired records will be deleted automatically.<br>
+        Set it to -1 to disable it, so the numbers will never be deleted automatically.
+        ]]>
+    </string>
+    <string name="customize">Customize</string>
+    <string name="workflow">Workflow</string>
+    <string name="workflows">Workflows</string>
+    <string name="automation">Automation</string>
+    <string name="help_workflows">
+        <![CDATA[
+        Workflows can be used to run tasks automatically, such as updating database, or auto backup.<br>
+        <br>
+        There are presets for a quick setup, you can also build it from scratch, or import from a json configuration that shared from other users.<br>
+        <br>
+        If you find any workflow that could be widely used and should be added to the presets, please report it on github.
+        ]]>
+    </string>
+    <string name="manual">Manual</string>
+
+    <string name="bot_preset_dnc"><no_translate>FTC - Do Not Call 🇺🇸</no_translate></string>
+    <string name="bot_preset_cleanup_spam_db">Spam Database Cleanup</string>
+    <string name="bot_preset_cleanup_history">History Cleanup</string>
+    <string name="bot_preset_auto_backup">Auto Backup</string>
+
+    <string name="action_cleanup_history">Clean up History</string>
+    <string name="action_http_request">HTTP Request</string>
+    <string name="action_cleanup_spam_db">Cleanup Spam Database</string>
+    <string name="action_backup_export">Backup Export</string>
+    <string name="action_backup_import">Backup Import</string>
+    <string name="action_read_file">Read File</string>
+    <string name="action_write_file">Write File</string>
+    <string name="action_parse_csv">Parse CSV</string>
+    <string name="action_parse_xml">Parse XML</string>
+    <string name="action_regex_extract">Regex Extract</string>
+    <string name="action_import_to_spam_db">Import to Spam Database</string>
+    <string name="action_import_as_regex_rule">Import as Regex Rule</string>
+    <string name="action_convert_number">Replace Number</string>
+    <string name="action_find_rules">Find Rules</string>
+    <string name="action_modify_rules">Modify Rules</string>
+    <string name="action_modify_rules_placeholder">
+        A json string, for example:\n
+        {\n
+        "flags": 0, // Disable the rule\n
+        "priority": 100,\n
+        "blockType": 0\n
+        …\n
+        }\n
+    </string>
+
+    <string name="help_action_http_download">
+        <![CDATA[
+        HTTP download data as <u>content bytes</u>
+        ]]>
+    </string>
+    <string name="help_action_cleanup_spam_db">Delete expired numbers from spam database.</string>
+    <string name="help_action_cleanup_history">Delete expired history records.</string>
+    <string name="help_action_backup_export">
+        <![CDATA[
+        Export the current settings to <u>content bytes</u>.
+        ]]>
+    </string>
+    <string name="help_action_backup_import">
+        <![CDATA[
+        Apply settings from <u>content bytes</u>.
+        ]]>
+    </string>
+    <string name="help_action_read_file">
+        <![CDATA[
+        Get the <u>content bytes</u> from a file.
+        ]]>
+    </string>
+    <string name="help_action_write_file">
+        <![CDATA[
+        Write <u>content bytes</u> to a file.
+        ]]>
+    </string>
+    <string name="help_action_parse_csv">
+        <![CDATA[
+        Parse csv <u>content bytes</u> to a <u>list of numbers</u>
+        ]]>
+    </string>
+    <string name="help_action_parse_xml">
+        <![CDATA[
+        Parse xml <u>content bytes</u> using <b>xpath</b> and generate a <u>list of numbers.</u>
+        ]]>
+    </string>
+    <string name="help_action_regex_extract">
+        <![CDATA[
+        Extract a <u>list of numbers</u> from <u>content bytes</u> using regex.
+        ]]>
+    </string>
+    <string name="help_action_import_to_spam_db">
+        <![CDATA[
+        Add a <u>list of numbers</u> to the spam database.
+        ]]>
+    </string>
+    <string name="help_action_import_as_regex_rule">
+        <![CDATA[
+        Generate a new regex rule from a <u>list of numbers</u>.
+        ]]>
+    </string>
+    <string name="help_action_convert_number">
+        <![CDATA[
+        Convert the <u>list of numbers</u> to the format this app uses.<br>
+        <br>
+        For example, add two actions to replace:<br>
+        `<font color="#fa7f71">+</font>12345<font color="#fa7f71">####</font>` to `12345<font color="#03DAC5"><b>…</b></font>`:<br>
+        <br>
+        &ensp; - Replace `<font color="#fa7f71">(+)</font>` to ``<br>
+        &ensp; - Replace `<font color="#fa7f71">(#)</font>` to `<font color="#03DAC5"><b>.</b></font>`<br>
+        ]]>
+    </string>
+    <string name="help_action_find_rules">
+        <![CDATA[
+        Find a <u>list of rules</u> that match a specific description.
+        ]]>
+    </string>
+    <string name="help_action_modify_rules">
+        <![CDATA[
+        Change one or multiple attributes for a <u>list of rules</u>.
+        ]]>
+    </string>
+</resources>

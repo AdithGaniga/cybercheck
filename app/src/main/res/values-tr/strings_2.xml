@@ -1,0 +1,83 @@
+<resources>
+    <string name="contacts">Kişiler</string>
+    <string name="non_contacts">Rehberde Olmayan</string>
+    <string name="inclusive">Dahil</string>
+    <string name="exclusive">Hariç</string>
+    <string name="help_contacts">
+        <![CDATA[
+        Etkinleştirildiğinde, rehberdeki kişilerden gelen aramalar/mesajlar her zaman izinlidir. <br>
+        <br>
+          - <b>Dahil</b>: <br>
+              &emsp; Rehberde olmayan numaralar diğer kurallara göre kontrol edilecektir. <br>
+              &emsp; <font color="#ea86ff"><b>Öncelik: 10</b></font> <br>
+          <br>
+          - <font color="#fa7f71"><b>Hariç</b></font>: <br>
+              &emsp; Rehberde olmayan numaralar <font color="#fa7f71"><b>engellenecektir</b></font>. <br>
+              &emsp; <font color="#ea86ff"><b>Öncelik: 0</b></font> <br>
+        <br>
+        Hem aramalar hem de SMS mesajları kabul edilecektir.
+        ]]>
+    </string>
+    <string name="stir_attestation">STIR</string>
+    <string name="stir_include_unverified">Doğrulanmamışları Dahil Et</string>
+    <string name="unverified">Doğrulanmamış</string>
+    <string name="valid">Geçerli Arama</string>
+    <string name="spoof">Sahte Arama</string>
+    <string name="help_stir">
+        <![CDATA[
+            STIR/SHAKEN doğrulama <b>Android 11+</b> ve <b>taşıyıcı desteği gerektirir</b>. <br>
+            <br>
+            Üç olası doğrulama sonucu vardır: <br>
+            <font color="#03DAC5"><b>Geçerli</b></font> <br>
+            &emsp; Aramanın geçerli olması çok muhtemeldir, sahte değildir. <br>
+            <font color="#ffa500"><b>Doğrulanmamış</b></font> <br>
+            &emsp; Arama doğrulanamıyor veya STIR doğrulaması desteklenmiyor. <br>
+            <font color="#fa7f71"><b>Sahte</b></font> <br>
+            &emsp; Bunun sahte bir arama olma ihtimali çok yüksektir. <br>
+            <br>
+            <br>
+              - <b>Dahil</b>: <br>
+                  &emsp; Bu kontrolü geçemeyen aramalar, diğer kurallara göre hala kontrol edilecektir. <br>
+                  &emsp;  "<b>Doğrulanmamışları Dahil Et</b>" seçeneği işaretlendiğinde arama doğrulanmamış olsa bile geçecektir. <br>
+                  &emsp; <font color="#ea86ff"><b>Öncelik: 10</b></font> <br>
+              <br>
+              - <font color="#fa7f71"><b>Hariç</b></font>: <br>
+                  &emsp; Bu kontrolü geçemeyen aramalar <font color="#fa7f71"><b>engellenecektir</b></font>. <br>
+                  &emsp;  "<b>Doğrulanmamışları Dahil Et</b>" seçeneği işaretlendiğinde, arama doğrulanmamış olsa bile engellenecektir. <br>
+                  &emsp; <font color="#ea86ff"><b>Öncelik: 0</b></font>
+        ]]>
+    </string>
+    <string name="failed_to_import_from_csv">
+        <![CDATA[
+        .csv dosyasında gerekli alan <b>şekil</b> eksik, ayrıntılı açıklama için balon ipucunu kontrol edin.
+        ]]>
+    </string>
+    <string name="help_auto_report">
+        <![CDATA[
+        Gelen aramalarda engellenen numarayı tüm API uç noktalarına otomatik olarak raporlayın.<br>
+        <br>
+        Bir numara raporlanmadan önce bir saatlik bir zaman tamponu vardır. Bu zaman tamponu içinde tekrarlar veya geri aranırsa numara daha sonra izin verilirse, spam olarak kabul edilmez ve raporlanmaz.<br>
+        <br>
+        <b>1</b>. Geçen numaralar <font color="#fa7f71"><b>raporlanmayacaktır</b></font>.
+        <br>
+        <b>2</b>. Bu türler tarafından engellenen numaralar <font color="#03DAC5"><b>raporlanacaktır</b></font>:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Kişi Değil</b></font>(hariç tutma)<br>
+        - <font color="#6ed0ff"><b>STIR Doğrulaması</b></font><br>
+        - <font color="#6ed0ff"><b>Numara Regex</b></font><br>
+        - <font color="#6ed0ff"><b>SMS İçerik Regex</b></font><br>
+        <br>
+        <b>3</b>. Aşağıdaki türler tarafından engellenen numaralar <font color="#fa7f71"><b>raporlanmayacaktır</b></font>:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Kişi Regex</b></font><br>
+        - <font color="#6ed0ff"><b>Kişi Grubu Regex</b></font><br>
+        - <font color="#6ed0ff"><b>Toplantı Modu</b></font><br>
+        - <font color="#6ed0ff"><b>Genel Test</b></font><br>
+        - <font color="#6ed0ff"><b>Anlık Sorgu</b></font>, API uç noktasının numarasının rakiplerine sızmasını engeller.<br>
+        &emsp; Bir istisna şudur ki, puanlama skorunu artırmak için aynı API\'ye geri bildirilecektir. (aynı etki alanına sahip bir raporlama API\'si yapılandırılmışsa)<br>
+        - <font color="#6ed0ff"><b>Veritabanı</b></font><br>
+        &emsp; Bir istisna şudur ki, numara başlangıçta anlık bir API sorgusu tarafından eklenmiş ve daha sonra yerel veritabanı tarafından tekrar engellenmişse, puanlama skorunu artırmak için yalnızca bu API\'ye bildirilecektir. (aynı etki alanına sahip bir raporlama API\'si yapılandırılmışsa)<br>
+        ]]>
+    </string>
+    <string name="auto_report">Otomatik Raporlama</string>
+</resources>

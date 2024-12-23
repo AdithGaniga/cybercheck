@@ -1,0 +1,13 @@
+name: Duscussion
+description: Start a discussion
+labels: [discussion]
+body:
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Talk about anything
+    validations:
+      required: true
+
+

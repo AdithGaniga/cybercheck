@@ -1,0 +1,66 @@
+<resources>
+    <string name="help_sms_content_filter">
+        <![CDATA[
+        These rules apply to the SMS content.<br>
+        <br>
+        <font color="#00BFFF"><b> - Some typical patterns</b></font>:<br>
+        &ensp; - Contains "verification": <font color="#03DAC5"><b>.*verification.*</b></font><br>
+        &ensp; - Contains any of the words: <font color="#03DAC5"><b>.*(police|hospital|verification).*</b></font>
+        ]]>
+    </string>
+    <string name="help_quick_copy">
+        <![CDATA[
+        A quick way to copy content from SMS messages or phone numbers, making it easy to grab verification codes or incoming numbers.<br>
+        <br>
+        When it matches, a button like <font color="#00BFFF"><b>Copy: 123456</b></font> would appear in the notification.<br>
+        <br>
+        A sample rule for extracting verification codes:<br>
+        &emsp; Using capturing group:<br>
+        &emsp;&emsp; <font color="#03DAC5"><b>code.*?(\\d+) </b></font><br>
+        &emsp; Another approach using lookaround:<br>
+        &emsp;&emsp; <font color="#03DAC5"><b>(?&lt;=code.{0,3})\\d+</b></font>
+        ]]>
+    </string>
+    <string name="help_apply_to_call_sms">
+        <![CDATA[
+        Enable this rule for Call, SMS, or both.<br>
+        Uncheck these checkboxes to disable the rule without deleting it.
+        ]]>
+    </string>
+    <string name="help_apply_to_number_and_message">
+        <![CDATA[
+        When <font color="#00BFFF"><b>Number</b></font> is checked, this rule will extract content from the incoming number.
+        For example, use <b>(.*)</b> to copy the phone number.<br>
+        <br>
+        When <font color="#00BFFF"><b>Content</b></font> is checked, this rule will extract content from the SMS message body,
+        such as verification codes.
+        ]]>
+    </string>
+    <string name="help_apply_to_passed_and_blocked">
+        <![CDATA[
+        When <font color="#03DAC5"><b>Passed</b></font> is checked, this rule will apply to passed calls and messages.<br>
+        <br>
+        When <font color="#fa7f71"><b>Blocked</b></font> is checked, this rule will apply to blocked calls and messages.
+        ]]>
+    </string>
+    <string name="help_importance">
+        <![CDATA[
+        <b>None</b>:<br>&emsp; No notification at all. <br>
+        <b>Shade</b>:<br>&emsp; The dropdown notification shade. <br>
+        <b>StatusBar</b>:<br>&emsp; The small icon in the top bar. <br>
+        <b>Sound</b>:<br>&emsp; The default notification sound. <br>
+        <b>Heads-Up</b>:<br>&emsp; Popup a floating window on the top of the screen.
+        ]]>
+    </string>
+    <string name="title_rule_testing">Rule Testing</string>
+    <string name="help_test_rules">
+        <![CDATA[
+        This helps to check if the rules are set as expected.<br>
+        <br>
+        It is just a simulation and will not actually popup an incoming call(or text message).<br>
+        <br>
+        The result is shown here, and in history log, with notification.
+        ]]>
+    </string>
+
+</resources>

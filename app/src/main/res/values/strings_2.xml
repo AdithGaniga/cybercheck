@@ -1,0 +1,85 @@
+<resources>
+    <string name="contacts">Contact</string>
+    <string name="non_contacts">Non Contact</string>
+    <string name="inclusive">Inclusive</string>
+    <string name="exclusive">Exclusive</string>
+    <string name="help_contacts">
+        <![CDATA[
+        When enabled, calls/messages from contacts are always permitted. <br>
+        <br>
+          - <b>Inclusive</b>: <br>
+              &emsp; Non-contact numbers will be checked by other rules. <br>
+              &emsp; <font color="#ea86ff"><b>Priority: 10</b></font> <br>
+          <br>
+          - <font color="#fa7f71"><b>Exclusive</b></font>: <br>
+              &emsp; Non-contact numbers will be <font color="#fa7f71"><b>blocked</b></font>. <br>
+              &emsp; <font color="#ea86ff"><b>Priority: 0</b></font> <br>
+        <br>
+        It applies to both calls and SMS messages.
+        ]]>
+    </string>
+    <string name="stir_attestation">STIR</string>
+    <string name="stir_include_unverified">Include Unverified</string>
+    <string name="unverified">Unverified</string>
+    <string name="valid">Valid Call</string>
+    <string name="spoof">Spoof Call</string>
+    <string name="help_stir">
+        <![CDATA[
+            STIR/SHAKEN attestation requires <b>Android 11+</b> and <b>carrier support</b>. <br>
+            <br>
+            There are three possible attestation results: <br>
+            <font color="#03DAC5"><b>Valid</b></font> <br>
+            &emsp; The call is very likely to be valid, not spoofed. <br>
+            <font color="#ffa500"><b>Unverified</b></font> <br>
+            &emsp; The call is not able to be validated, or STIR attestation is not supported. <br>
+            <font color="#fa7f71"><b>Spoof</b></font> <br>
+            &emsp; It is very likely to be a spoofed call. <br>
+            <br>
+            <br>
+              - <b>Inclusive</b>: <br>
+                  &emsp; Calls that fail this check will still be checked by other rules. <br>
+                  &emsp; When "<b>Include Unverified</b>" is checked, a call would also pass if it\'s unverified. <br>
+                  &emsp; <font color="#ea86ff"><b>Priority: 10</b></font> <br>
+              <br>
+              - <font color="#fa7f71"><b>Exclusive</b></font>: <br>
+                  &emsp; Calls that fail this check will be <font color="#fa7f71"><b>blocked</b></font>. <br>
+                  &emsp; When "<b>Include Unverified</b>" is checked, a call would also be blocked if it\'s unverified. <br>
+                  &emsp; <font color="#ea86ff"><b>Priority: 0</b></font>
+        ]]>
+    </string>
+    <string name="failed_to_import_from_csv">
+        <![CDATA[
+        Missing required field <b>pattern</b> in the .csv file, check the balloon tooltip for a detailed explanation.
+        ]]>
+    </string>
+    <string name="auto_report">Auto Report</string>
+    <string name="help_auto_report">
+        <![CDATA[
+        Auto report a blocked number to all API endpoints on incoming calls.<br>
+        <br>
+        There is a one-hour time buffer before a number is reported. If the number is allowed later due to repeats or dialed
+        back within this time buffer, it\'s considered non-spam and will not be reported.<br>
+        <br>
+        <b>1</b>. Passed numbers <font color="#fa7f71"><b>will not</b></font> be reported.
+        <br>
+        <b>2</b>. Numbers that are blocked by these types <font color="#03DAC5"><b>will</b></font> be scheduled to report:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Non-Contact</b></font>(exclusive)<br>
+        - <font color="#6ed0ff"><b>STIR Attestation</b></font><br>
+        - <font color="#6ed0ff"><b>Number Regex</b></font><br>
+        - <font color="#6ed0ff"><b>SMS Content Regex</b></font><br>
+        <br>
+        <b>3</b>. Numbers that are blocked by following types <font color="#fa7f71"><b>will not</b></font> be reported:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Contact Regex</b></font><br>
+        - <font color="#6ed0ff"><b>Contact Group Regex</b></font><br>
+        - <font color="#6ed0ff"><b>Meeting Mode</b></font><br>
+        - <font color="#6ed0ff"><b>Global Testing</b></font><br>
+        - <font color="#6ed0ff"><b>Instant Query</b></font>, preventing the API endpoint\'s number from being leaked to their competitors.<br>
+        &emsp; One exception is that, it will be reported back to the same API to increase its rating score. (if a reporting API with the same domain is configured)<br>
+        - <font color="#6ed0ff"><b>Database</b></font><br>
+        &emsp; One exception is that, if the number was originally added by an instant API query and later blocked again by
+        the local database, it will be reported only to that API to increase the rating score. (if a reporting API with the same domain is configured)<br>
+        ]]>
+    </string>
+</resources>

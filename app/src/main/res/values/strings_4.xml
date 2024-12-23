@@ -1,0 +1,38 @@
+<resources>
+    <string name="help_off_time">
+        <![CDATA[
+        When enabled, all calls(messages) will be allowed during this time period. Usually there are no spam calls at night. <br>
+        <br>
+        If the start time is greater than the end time, for example, 20:00 -> 07:00, it means the period from 20:00 in the evening to 07:00 the next morning. <br>
+        <br>
+        <font color="#ea86ff"><b>Priority: 10</b></font>
+        ]]>
+    </string>
+
+    <string name="help_regex_flags">
+        <![CDATA[
+            These flags change the matching behavior of the regex, they are set for new rules by default. <br>
+            <br>
+
+            <font color="#00BFFF"><b>Ignore Case</b></font>:<br>
+            &ensp; It makes the pattern matching case-insensitive, <font color="#03DAC5"><b>a</b></font>
+              would match both <font color="#03DAC5"><b>a</b></font> and <font color="#03DAC5"><b>A</b></font>. <br>
+            <br>
+
+            <font color="#00BFFF"><b>Dot Match All</b></font>: <br>
+            &ensp; When enabled, <font color="#03DAC5"><b>.</b></font> will also match newline characters (<font color="#03DAC5"><b>\\n</b></font>),
+              this allows the dot to match across multiple lines. <br>
+            &ensp; Use case: <br>
+            &emsp;   Match multiline SMS message: <br>
+            &emsp;   <font color="#fa7f71">claim your prize: http://<br>
+            &emsp;   abc.com </font><br>
+            &emsp;   with rule: <br>
+            &emsp;   <font color="#fa7f71"><b>*http.*com.*</b></font> <br>
+
+            <br>
+            <font color="#00BFFF"><b>Raw Number</b></font>: <br>
+            &ensp; When enabled, the number will not be optimized, <font color="#03DAC5"><b>+</b></font> and <font color="#03DAC5"><b>leading 0s</b></font> will remain, useful for differentiating domestic numbers.
+        ]]>
+    </string>
+
+</resources>

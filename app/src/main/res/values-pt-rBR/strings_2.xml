@@ -1,0 +1,83 @@
+<resources>
+    <string name="contacts">Contatos</string>
+    <string name="non_contacts">Não Contatos</string>
+    <string name="inclusive">Inclusivo</string>
+    <string name="exclusive">Exclusivo</string>
+    <string name="help_contacts">
+        <![CDATA[
+        Quando ativado, chamadas/mensagens de contatos são sempre permitidas. <br>
+        <br>
+          - <b>Inclusivo</b>: <br>
+              &emsp; Números não salvos nos contatos serão verificados por outras regras. <br>
+              &emsp; <font color="#ea86ff"><b>Prioridade: 10</b></font> <br>
+          <br>
+          - <font color="#fa7f71"><b>Exclusivo</b></font>: <br>
+              &emsp; Números não salvos nos contatos serão <font color="#fa7f71"><b>bloqueados</b></font>. <br>
+              &emsp; <font color="#ea86ff"><b>Prioridade: 0</b></font> <br>
+        <br>
+        Isso se aplica a chamadas e mensagens SMS.
+        ]]>
+    </string>
+    <string name="stir_attestation">STIR</string>
+    <string name="stir_include_unverified">Incluir Não Verificado</string>
+    <string name="unverified">Não Verificado</string>
+    <string name="valid">Chamada Válida</string>
+    <string name="spoof">Chamada Falsa</string>
+    <string name="help_stir">
+        <![CDATA[
+            Atestação STIR/SHAKEN requer <b>Android 11+</b> e <b>suporte da operadora</b>. <br>
+            <br>
+            Existem três resultados possíveis de atestação: <br>
+            <font color="#03DAC5"><b>Válido</b></font> <br>
+            &emsp; A chamada é muito provavelmente válida, não falsificada. <br>
+            <font color="#ffa500"><b>Não Verificado</b></font> <br>
+            &emsp; A chamada não pode ser validada ou a atestação STIR não é suportada. <br>
+            <font color="#fa7f71"><b>Falsa</b></font> <br>
+            &emsp; É muito provável que seja uma chamada falsificada. <br>
+            <br>
+            <br>
+              - <b>Inclusivo</b>: <br>
+                  &emsp; Chamadas que falham nesta verificação ainda serão verificadas por outras regras. <br>
+                  &emsp; Quando "<b>Incluir Não Verificado</b>" está marcado, uma chamada também passaria se não estivesse verificada. <br>
+                  &emsp; <font color="#ea86ff"><b>Prioridade: 10</b></font> <br>
+              <br>
+              - <font color="#fa7f71"><b>Exclusivo</b></font>: <br>
+                  &emsp; Chamadas que falham nesta verificação serão <font color="#fa7f71"><b>bloqueadas</b></font>. <br>
+                  &emsp; Quando "<b>Incluir Não Verificado</b>" está marcado, uma chamada também seria bloqueada se não estivesse verificada. <br>
+                  &emsp; <font color="#ea86ff"><b>Prioridade: 0</b></font>
+        ]]>
+    </string>
+    <string name="failed_to_import_from_csv">
+        <![CDATA[
+        Campo obrigatório <b>pattern</b> ausente no arquivo .csv, verifique a dica de ferramenta do balão para uma explicação detalhada.
+        ]]>
+    </string>
+    <string name="help_auto_report">
+        <![CDATA[
+        Relatar automaticamente um número bloqueado para todos os endpoints da API em chamadas recebidas.<br>
+        <br>
+        Existe um buffer de tempo de uma hora antes de um número ser relatado. Se o número for permitido posteriormente devido a repetições ou retorno da ligação dentro desse buffer de tempo, ele será considerado não spam e não será relatado.<br>
+        <br>
+        <b>1</b>. Números aprovados <font color="#fa7f71"><b>não serão</b></font> relatados.
+        <br>
+        <b>2</b>. Números bloqueados por estes tipos <font color="#03DAC5"><b>serão</b></font> programados para relatório:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Não Contato</b></font>(exclusivo)<br>
+        - <font color="#6ed0ff"><b>Autenticação STIR</b></font><br>
+        - <font color="#6ed0ff"><b>Expressão Regular de Número</b></font><br>
+        - <font color="#6ed0ff"><b>Expressão Regular de Conteúdo SMS</b></font><br>
+        <br>
+        <b>3</b>. Números bloqueados pelos seguintes tipos <font color="#fa7f71"><b>não serão</b></font> relatados:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Expressão Regular de Contato</b></font><br>
+        - <font color="#6ed0ff"><b>Expressão Regular de Grupo de Contatos</b></font><br>
+        - <font color="#6ed0ff"><b>Modo Reunião</b></font><br>
+        - <font color="#6ed0ff"><b>Teste Global</b></font><br>
+        - <font color="#6ed0ff"><b>Consulta Instantânea</b></font>, evitando que o número do endpoint da API seja vazado para seus concorrentes.<br>
+        &emsp; Uma exceção é que ele será relatado de volta à mesma API para aumentar sua pontuação de classificação. (se uma API de relatórios com o mesmo domínio estiver configurada)<br>
+        - <font color="#6ed0ff"><b>Banco de Dados</b></font><br>
+        &emsp; Uma exceção é que, se o número foi adicionado originalmente por uma consulta instantânea da API e posteriormente bloqueado novamente pelo banco de dados local, ele será relatado apenas para essa API para aumentar a pontuação de classificação. (se uma API de relatórios com o mesmo domínio estiver configurada)<br>
+        ]]>
+    </string>
+    <string name="auto_report">Relatório Automático</string>
+</resources>

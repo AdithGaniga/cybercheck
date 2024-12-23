@@ -1,0 +1,83 @@
+<resources>
+    <string name="contacts">Contacto</string>
+    <string name="non_contacts">No Contacto</string>
+    <string name="inclusive">Inclusivo</string>
+    <string name="exclusive">Exclusivo</string>
+    <string name="help_contacts">
+        <![CDATA[
+        Cuando está habilitado, las llamadas/mensajes de los contactos siempre están permitidos. <br>
+        <br>
+          - <b>Inclusivo</b>: <br>
+              &emsp; Los números que no son de contacto se verificarán con otras reglas. <br>
+              &emsp; <font color="#ea86ff"><b>Prioridad: 10</b></font> <br>
+          <br>
+          - <font color="#fa7f71"><b>Exclusivo</b></font>: <br>
+              &emsp; Los números que no son de contacto serán <font color="#fa7f71"><b>bloqueados</b></font>. <br>
+              &emsp; <font color="#ea86ff"><b>Prioridad: 0</b></font> <br>
+        <br>
+        Se aplica a las llamadas y los mensajes SMS.
+        ]]>
+    </string>
+    <string name="stir_attestation">STIR</string>
+    <string name="stir_include_unverified">Incluir No Verificado</string>
+    <string name="unverified">No Verificado</string>
+    <string name="valid">Llamada Válida</string>
+    <string name="spoof">Llamada Falsificada</string>
+    <string name="help_stir">
+        <![CDATA[
+            La atestación STIR/SHAKEN requiere <b>Android 11+</b> y <b>soporte del operador</b>. <br>
+            <br>
+            Hay tres posibles resultados de atestación: <br>
+            <font color="#03DAC5"><b>Válido</b></font> <br>
+            &emsp; Es muy probable que la llamada sea válida, no falsificada. <br>
+            <font color="#ffa500"><b>No Verificado</b></font> <br>
+            &emsp; No se puede validar la llamada, o STIR no es compatible. <br>
+            <font color="#fa7f71"><b>Falsificado</b></font> <br>
+            &emsp; Es muy probable que sea una llamada falsificada. <br>
+            <br>
+            <br>
+              - <b>Inclusivo</b>: <br>
+                  &emsp; Las llamadas que no superan esta verificación se seguirán comprobando con otras reglas. <br>
+                  &emsp; Cuando se marca "<b>Incluir No Verificado</b>", una llamada también se aprobará si no está verificada. <br>
+                  &emsp; <font color="#ea86ff"><b>Prioridad: 10</b></font> <br>
+              <br>
+              - <font color="#fa7f71"><b>Exclusivo</b></font>: <br>
+                  &emsp; Las llamadas que no superan esta verificación se <font color="#fa7f71"><b>bloquearán</b></font>. <br>
+                  &emsp; Cuando se marca "<b>Incluir No Verificado</b>", una llamada también se bloqueará si no está verificada. <br>
+                  &emsp; <font color="#ea86ff"><b>Prioridad: 0</b></font>
+        ]]>
+    </string>
+    <string name="failed_to_import_from_csv">
+        <![CDATA[
+        Falta el campo requerido <b>patrón</b> en el archivo .csv, consulte la información sobre herramientas del globo para obtener una explicación detallada.
+        ]]>
+    </string>
+    <string name="help_auto_report">
+        <![CDATA[
+        Informar automáticamente un número bloqueado a todos los puntos finales de la API en llamadas entrantes.<br>
+        <br>
+        Hay un búfer de tiempo de una hora antes de que se informe un número. Si el número se permite más tarde debido a repeticiones o devoluciones de llamada dentro de este búfer de tiempo, se considera que no es spam y no se informará.<br>
+        <br>
+        <b>1</b>. Los números aprobados <font color="#fa7f71"><b>no</b></font> se informarán.
+        <br>
+        <b>2</b>. Los números que están bloqueados por estos tipos <font color="#03DAC5"><b>se</b></font> programarán para informar:<br>
+        <br>
+        - <font color="#6ed0ff"><b>No Contacto</b></font>(exclusivo)<br>
+        - <font color="#6ed0ff"><b>Atestación STIR</b></font><br>
+        - <font color="#6ed0ff"><b>Expresión regular de número</b></font><br>
+        - <font color="#6ed0ff"><b>Expresión regular de contenido SMS</b></font><br>
+        <br>
+        <b>3</b>. Los números que están bloqueados por los siguientes tipos <font color="#fa7f71"><b>no</b></font> se informarán:<br>
+        <br>
+        - <font color="#6ed0ff"><b>Expresión regular de contacto</b></font><br>
+        - <font color="#6ed0ff"><b>Expresión regular de grupo de contactos</b></font><br>
+        - <font color="#6ed0ff"><b>Modo reunión</b></font><br>
+        - <font color="#6ed0ff"><b>Prueba global</b></font><br>
+        - <font color="#6ed0ff"><b>Consulta instantánea</b></font>, evitando que el número del punto final de la API se filtre a sus competidores.<br>
+        &emsp; Una excepción es que se informará a la misma API para aumentar su puntuación de calificación. (si está configurada una API de informes con el mismo dominio)<br>
+        - <font color="#6ed0ff"><b>Base de datos</b></font><br>
+        &emsp; Una excepción es que, si el número se agregó originalmente mediante una consulta de API instantánea y luego se bloqueó nuevamente mediante la base de datos local, solo se informará a esa API para aumentar la puntuación de calificación. (si está configurada una API de informes con el mismo dominio)<br>
+        ]]>
+    </string>
+    <string name="auto_report">Informe automático</string>
+</resources>

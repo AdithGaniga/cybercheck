@@ -1,0 +1,60 @@
+<resources>
+    <string name="http_method">Yöntem</string>
+    <string name="http_post_body">Gönderi Gövdesi</string>
+    <string name="help_http_post_body">
+        <![CDATA[
+        Desteklenen etiketler:<br>
+        <br>
+        %s
+        ]]>
+    </string>
+    <string name="missing_credentials">Lütfen geçerli yetkilendirme bilgilerini girin.</string>
+    <string name="delay">Gecikme</string>
+    <string name="report_number_require_call_log_permission">
+        Tekrarlanan aramaların veya geri aranan numaraların yanlış raporlanmasını önlemek için,
+        numara raporlaması arama günlüğü iznine ihtiyaç duyar.
+    </string>
+    <string name="exclude_services">Hizmetleri Hariç Tut</string>
+    <string name="help_exclude_bg_service">
+        <![CDATA[
+        Bazı uygulamalar ekstra ön plan hizmetleri çalıştırır, bunları hariç tutmak için hizmet adlarını buraya ekleyin.<br>
+        <br>
+        Bir hizmet adı bulmak için:<br>
+        &emsp; 1. Uygulamada hizmeti etkinleştirin.<br>
+        &emsp; 2. Tüm etkinleştirilmiş hizmet adları burada görünecektir.<br>
+        &emsp; 3. Eklemek için bir adıma dokunun.<br>
+        <br>
+        Virgülle ayırarak birden fazla ad ekleyebilirsiniz.
+        ]]>
+    </string>
+    <string name="running_services">Çalışan Hizmetler</string>
+    <string name="report_number">Numarayı Bildir</string>
+    <string-array name="spam_categories">
+        <item>Geçerli Numara</item>
+        <item>Sahtekarlık</item>
+        <item>Pazarlama</item>
+        <item>Anket</item>
+        <item>Siyasi</item>
+        <item>Diğer Spam</item>
+    </string-array>
+    <string name="action_category_config">Kategori Yapılandırması</string>
+    <string name="help_action_category_config">
+        <![CDATA[
+        Yalnızca aşağıdaki spam kategorileri desteklenir, API\'den gelen diğer tüm kategoriler bunlardan birine eşleştirilmelidir.<br>
+        <br>
+         - <font color="#03DAC5"><b>{geçerli}</b></font><br>
+        &ensp; Geçerli numara olarak bildirin, spam değil.<br>
+        <br>
+         - <font color="#fa7f71"><b>{sahtekarlık}</b></font><br>
+         - <font color="#fa7f71"><b>{pazarlama}</b></font><br>
+         - <font color="#fa7f71"><b>{anket}</b></font><br>
+         - <font color="#fa7f71"><b>{siyasi}</b></font><br>
+        <br>
+         - <font color="#fa7f71"><b>{diğer}</b></font><br>
+        &ensp; Yukarıdaki kategorilerden hiçbiri uygulanmadığında kullanılan yedek spam türü.<br>
+        ]]>
+    </string>
+    <string name="missing_category">
+        %s kategorisi %s eyleminde yapılandırılmadı, lütfen API yapılandırmasında yapılandırın (API bu kategoriyi destekliyorsa).
+    </string>
+</resources>

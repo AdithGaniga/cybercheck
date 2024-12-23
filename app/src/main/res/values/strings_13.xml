@@ -1,0 +1,111 @@
+<resources>
+    <string name="cleaning_up_history_db">
+        Cleaning up history db, deleting records before timestamp: %s.
+    </string>
+    <string name="cleaning_up_spam_db">
+        Cleaning up spam db, deleting %s records before timestamp: %s".
+    </string>
+    <string name="resolved_url">Resolved url: %s</string>
+    <string name="time_cost">Time cost: %s milliseconds.</string>
+    <string name="parsed_n_rules">Parsed %s rules.</string>
+    <string name="add_n_numbers_to_spam_db">Adding %s numbers to spam db.</string>
+    <string name="nothing_to_import">Number list is empty, nothing to import.</string>
+    <string name="importing_n_numbers">Importing %s numbers as regex rule.</string>
+    <string name="create_rule_with_numbers">Creating rule with %s numbers.</string>
+    <string name="replace_rule_with_desc">Replacing the rule with description: %s.</string>
+    <string name="rule_with_desc_not_found">Rule with description %s not found.</string>
+    <string name="merging_rule_with_desc">Merging the rule with description: %s.</string>
+    <string name="regex_count_after_merge">Regex count before: %s, after: %s.</string>
+    <string name="replace_number_from_to">Replacing number from %s to %s.</string>
+    <string name="find_rule_with_desc">Found %s rules with description %s.</string>
+    <string name="modify_n_rules">Modifying %s rules.</string>
+    <string name="number_not_match_filter">The number %s doesn\'t match the filter %s, skip.</string>
+    <string name="fail_detect_cc">Failed to detect country code.</string>
+    <string name="identified_as_spam">Identified as spam number, category: %s.</string>
+    <string name="identified_as_valid">Identified as valid number, category: %s.</string>
+    <string name="unidentified_number">Unidentified number.</string>
+    <string name="auto_detect_cc_permission">The permission READ_PHONE_STATE is required for detecting country code.</string>
+    <string name="number_tags">
+        <![CDATA[
+        - <font color="#00BFFF"><b>{cc}</b></font><br>
+        &ensp; The country code.<br>
+        - <font color="#00BFFF"><b>{domestic}</b></font><br>
+        &ensp; The domestic part.<br>
+        - <font color="#00BFFF"><b>{number}</b></font><br>
+        &ensp; The full number, including both country code and domestic part, without leading + or 0s.<br>
+        - <font color="#00BFFF"><b>{origin_number}</b></font><br>
+        &ensp; The origin number that can contain leading + or 0s.<br>
+        ]]>
+    </string>
+    <string name="time_tags">
+        <![CDATA[
+        - <font color="#00BFFF"><b>{year}</b></font><br>
+        &ensp; The year, e.g.: 2024<br>
+        - <font color="#00BFFF"><b>{month} {day}</b></font><br>
+        &ensp; Single-digit number will be padded with leading zero, e.g.: <br>
+        &emsp; {month}_{day} -> 01_02<br>
+        - <font color="#00BFFF"><b>{month_index} {day_index}</b></font><br>
+        &ensp; These values will be padded without leading zero, e.g.: <br>
+        &emsp; {month}_{day} -> 1_2<br>
+        ]]>
+    </string>
+    <string name="help_http_url">
+        <![CDATA[
+        Supported tags:<br>
+        <br>
+        %s
+        <br>
+        %s
+        ]]>
+    </string>
+    <string name="api_preset_phoneblock"><no_translate>PhoneBlock(Test) 🇩🇪 🌐</no_translate></string>
+    <string name="help_api_preset_phoneblock">
+        <![CDATA[
+        <font color="#ffa500"><b>Currently in testing with testing API, it will transition to
+        the production API in the next release v4.0.<b></font><br>
+        <br>
+        <font color="#ffa500"><b>Testing and production accounts are not compatible,
+        please register again after switching to production later.<b></font><br>
+        <br>
+        Currently, it\'s for <b>German</b> users, with potential for global expansion.<br>
+        <br>
+        Website: <a href="https://phoneblock.net/pb-test/api/">https://phoneblock.net/pb-test/api/</a>
+        ]]>
+    </string>
+    <string name="help_api_preset_phoneblock_authorization">
+        <![CDATA[
+        Register an account on <a href="https://phoneblock.net/pb-test/api/">https://phoneblock.net/pb-test/api/</a>
+        to get your username and password. Then, fill them in below.<br>
+        <br>
+        They should look like:<br>
+        - Username:<br>
+         &emsp; xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxxxxxxx<br>
+        - Password:<br>
+         &emsp; xxxxxxxxxxxxxxxxxxxx
+        ]]>
+    </string>
+    <string name="not_enough_time_left">
+        The call screening time limit is 5 seconds, with a %s ms buffer
+        for the inaccuracy of time functions, the total time limit is actually %s ms.
+        The previous steps cost %s ms, not enough time left, skip.
+    </string>
+    <string name="action_filter_query_result">Filter Spam</string>
+    <string name="help_action_filter_query_result">
+        <![CDATA[
+        Generate a <u>list of numbers</u> containing the spam number identified from the previous step, and ready to be imported to the database.
+        ]]>
+    </string>
+    <string name="another_thread_is_cancelled">Another thread is cancelled.</string>>
+    <string name="username">Username</string>>
+    <string name="password">Password</string>>
+    <string name="suggest_to_swipe">
+        <![CDATA[
+        <font color="#03DAC5"><b>Swipe left</b></font> to delete it.<br>
+        <br>
+        Most card-like UI elements in this app are associated with swiping gestures,
+        some of which also support <font color="#03DAC5"><b>swiping right</b></font>, for example, the history records.
+        ]]>
+    </string>>
+    <string name="bug_number">If this is a valid number, please report it on github.</string>>
+    <string name="skip_alpha_empty_number">Skip alpha or empty number.</string>>
+</resources>

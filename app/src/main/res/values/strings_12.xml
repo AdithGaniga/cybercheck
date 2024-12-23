@@ -1,0 +1,96 @@
+<resources>
+    <string name="help_instant_query">
+        <![CDATA[
+        Query the incoming number online in real time, multiple API endpoints will be queried simultaneously.<br>
+        <br>
+        It only applies to calls, not to SMS messages.<br>
+        <br>
+        It will only be triggered when the call passes all other rules.<br>
+        <br>
+        <font color="#ea86ff"><b>Priority: -1</b></font>
+        ]]>
+    </string>
+    <string name="instant_query">Instant Query</string>
+    <string name="query">Query</string>
+    <string name="negative_identifier">Negative Identifier</string>
+    <string name="hint_negative_identifier">
+        E.g.: (\"valid\":false)
+    </string>
+    <string name="help_negative_identifier">
+        It will be identified as spam number if this regex pattern is found in the result.
+    </string>
+    <string name="positive_identifier">Positive Identifier</string>
+    <string name="hint_positive_identifier">
+        E.g.: (\"valid\":true)
+    </string>
+    <string name="help_positive_identifier">
+        <![CDATA[
+        It will be identified as non-spam number if this regex pattern is found in the result, it\'s optional.<br>
+        <br>
+        Usually this is <b>unnecessary</b>, some API providers will identify unknown numbers as non-spam,
+        only use this when the API is really accurate.
+        ]]>
+    </string>
+    <string name="category_identifier">Category Identifier</string>
+    <string name="hint_category_identifier">
+        E.g.: \"type\":\"(.+?)\"
+    </string>
+    <string name="help_category_identifier">
+        <![CDATA[
+        Optional. <br>
+        Once a number is identified, this regex will be used to extract its category(telemarketing, fishing, etc).
+        ]]>
+    </string>
+    <string name="action_parse_query_result">Parse Result</string>
+    <string name="help_action_parse_query_result">
+        <![CDATA[
+        Parse the query result, the number will be identified as a spam if the result contains a particular regex pattern.<br>
+        <br>
+        An extra regex can be used to extract the spam category. (optional)
+        ]]>
+    </string>
+    <string name="action_parse_incoming_number">Parse Number</string>
+    <string name="help_action_parse_incoming_number">
+        <![CDATA[
+        The incoming call number will be parsed into different tags:<br>
+        <br>
+        %s
+        <br>
+        These tags will be used to build the HTTP URL, for example:<br>
+        <br>
+        1. For international number like <b>+122222</b>, these two are equivalent:<br>
+        - https://test.com/number=<b>{number}</b><br>
+        - https://test.com/number=<b>{cc}{domestic}</b><br>
+        It will be parsed to: <br>
+        https://test.com/number=<b>122222</b><br>
+        <br>
+        2. For domestic number like <b>12345</b>, you need to provide the country code in the settings,
+        or let the app detect it automatically.<br>
+        ]]>
+    </string>
+    <string name="query_api">Query API</string>
+    <string name="report_api">Report API</string>
+    <string name="number_filter">Number Filter</string>
+    <string name="help_number_filter">
+        <![CDATA[
+        Some API services only support international numbers, while some only support domestic numbers.<br>
+        <br>
+        This regex filters numbers accordingly, incoming numbers that don\'t match this regex will be skipped checking.<br>
+        <br>
+        - Only check <b>international numbers</b>:<br>
+        &ensp; <font color="#03DAC5"><b>\\+.*</b></font><br>
+        <br>
+        - Only check <b>domestic numbers</b>:<br>
+        &ensp; <font color="#03DAC5"><b>0{1,2}.*</b></font><br>
+        <br>
+        - Check <b>any number</b>:<br>
+        &ensp; <font color="#03DAC5"><b>.*</b></font>
+        ]]>
+    </string>
+    <string name="checking_template">Checking: %s, priority: %s</string>
+    <string name="skip_for_testing">Skip for testing.</string>
+    <string name="allowed_by">Allowed by: %s</string>
+    <string name="blocked_by">Blocked by: %s</string>
+    <string name="outside_time_schedule">Outside time schedule, skip.</string>
+    <string name="android_ver_lower_than_11">Android version is lower than 11, skip.</string>
+</resources>

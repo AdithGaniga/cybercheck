@@ -1,0 +1,60 @@
+<resources>
+    <string name="http_method">Méthode</string>
+    <string name="http_post_body">Corps de la requête POST</string>
+    <string name="help_http_post_body">
+        <![CDATA[
+        Balises supportées:<br>
+        <br>
+        %s
+        ]]>
+    </string>
+    <string name="missing_credentials">Veuillez saisir des informations d\'autorisation valides.</string>
+    <string name="delay">Délai</string>
+    <string name="report_number_require_call_log_permission">
+        Pour éviter les faux signalements d\'appels répétés ou rappelés,
+        le signalement d\'un numéro nécessite l\'autorisation d\'accès à l\'historique des appels.
+    </string>
+    <string name="exclude_services">Exclure les services</string>
+    <string name="help_exclude_bg_service">
+        <![CDATA[
+        Certaines applications exécutent des services d\'arrière-plan supplémentaires. Ajoutez ici les noms des services à exclure.<br>
+        <br>
+        Pour trouver le nom d\'un service :<br>
+        &emsp; 1. Activez le service dans l\'application.<br>
+        &emsp; 2. Tous les noms des services activés apparaîtront ici.<br>
+        &emsp; 3. Appuyez sur un nom pour l\'ajouter.<br>
+        <br>
+        Vous pouvez ajouter plusieurs noms, séparés par des virgules.
+        ]]>
+    </string>
+    <string name="running_services">Services en cours d\'exécution</string>
+    <string name="report_number">Signaler un numéro</string>
+    <string-array name="spam_categories">
+        <item>Numéro valide</item>
+        <item>Fraude</item>
+        <item>Marketing</item>
+        <item>Sondage</item>
+        <item>Politique</item>
+        <item>Autres spams</item>
+    </string-array>
+    <string name="action_category_config">Config. Catégorie</string>
+    <string name="help_action_category_config">
+        <![CDATA[
+        Seules les catégories de spams suivantes sont prises en charge ; toute autre catégorie de l\'API doit être mappée à l\'une d\'elles.<br>
+        <br>
+         - <font color="#03DAC5"><b>{valid}</b></font><br>
+        &ensp; Signaler comme numéro valide, pas un spam.<br>
+        <br>
+         - <font color="#fa7f71"><b>{fraud}</b></font><br>
+         - <font color="#fa7f71"><b>{marketing}</b></font><br>
+         - <font color="#fa7f71"><b>{survey}</b></font><br>
+         - <font color="#fa7f71"><b>{political}</b></font><br>
+        <br>
+         - <font color="#fa7f71"><b>{other}</b></font><br>
+        &ensp; Type de spam par défaut, utilisé lorsqu\'aucune des catégories ci-dessus ne s\'applique.<br>
+        ]]>
+    </string>
+    <string name="missing_category">
+        La catégorie %s n\'est pas configurée dans l\'action %s ; veuillez la configurer dans la configuration de l\'API (si l\'API prend en charge cette catégorie).
+    </string>
+</resources>
